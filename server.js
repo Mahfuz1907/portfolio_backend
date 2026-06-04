@@ -9,7 +9,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['https://portfolio-frontend-cv.netlify.app/']
+  origin: [
+    'https://portfolio-frontend-cv.netlify.app',
+    'http://localhost:5173'
+  ]
 }));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
